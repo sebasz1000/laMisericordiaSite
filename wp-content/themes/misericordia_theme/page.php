@@ -1,6 +1,7 @@
 <?php
 get_header();
 
+
 if(have_posts()) :
   while(have_posts()) : the_post(); ?>
 <article class="post page">
@@ -15,3 +16,6 @@ endif;
 
 get_footer();
 ?>
+<?php if(is_page('nuestros-servicios')){ ?>
+      <p>Esto en nuestros servicios</p>
+<?php } ?>
