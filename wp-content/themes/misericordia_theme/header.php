@@ -32,8 +32,8 @@
      </div> <!--container -->
   </header>
   <aside id='extra-links'>
-   <a href=''>Notificaciones judiciales</a>
-   <a href=''>Quejas y reclamos</a>
+   <a href=<?php echo get_permalink(get_id_by_slug('notificaciones-judiciales')) ?>>Notificaciones judiciales</a>
+   <a href=<?php echo get_permalink(get_id_by_slug('quejas-y-reclamos')) ?>>Quejas y reclamos</a>
    <a href=''>Descarga nuestro boletín</a>
   </aside>
 
