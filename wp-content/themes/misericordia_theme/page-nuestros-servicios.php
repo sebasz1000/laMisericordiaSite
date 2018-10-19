@@ -6,22 +6,16 @@ get_header();
   if(have_posts()) :
     while(have_posts()) : the_post(); ?>
   <article class="post">
-  <?php if( has_children()  OR $post->post_parent > 0 ){ ?>
-   <nav class="breadcrumb">
-    <span class="parent-link"><a href=<?php echo  get_permalink(get_top_ancestor_id()) ?>><?php echo get_the_title(get_top_ancestor_id())?></a></span>
-    <ul>
-      <?php 
-          $args = array(
-            'child_of' => get_top_ancestor_id(),
-            'title_li' => ''
-          );
-          wp_list_pages($args); 
-      ?>
-     </ul>
-    </nav>
-    <?php } ?>
     <h1><?php the_title();  ?></h1>
     <p><?php the_content() ?></p>
+    <?php 
+     $pages = get_pages(array('child_of'=>$post->ID));
+      if($pages){
+        foreach($pages as $page){
+    ?>
+      <section><h3><a href=<?php echo get_permalink($page->ID); ?>><?php echo $page->post_title; ?></a></h3></section>
+    <?php } ?>
+    <?php } ?>
   </article>
   <?php
     endwhile;

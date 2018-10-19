@@ -20,7 +20,7 @@
             <input type="text" name="searchText">
             <input type="submit" value="Buscar">
          </form>
-         <nav class='site-nav'>
+         <nav class='site-nav clear-list-style'>
           <?php 
            $args = array(
                 'theme_location' => 'primary'

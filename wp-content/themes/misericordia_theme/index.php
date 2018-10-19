@@ -12,11 +12,11 @@ get_header();
      $top_page_ID = get_id_by_slug('nuestros-servicios');
      $pages = get_pages(array('child_of'=>$top_page_ID));
        if($pages != null){
-        foreach($pages as $post){
+        foreach($pages as $page){
     ?>
      <li>
-       <a href=<?php echo get_permalink($post->ID); ?> >
-          <h4><?php echo $post->post_title; ?></h4>
+       <a href=<?php echo get_permalink($page->ID); ?> >
+          <h4><?php echo $page->post_title; ?></h4>
         </a>
       </li>   
     <?php      
