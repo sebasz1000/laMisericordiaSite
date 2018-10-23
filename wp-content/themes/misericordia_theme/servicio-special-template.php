@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name:Plantilla de servicios
+Template Name:Plantilla Post de servicio
 */
 get_header();
 ?>
@@ -23,11 +23,15 @@ get_header();
     </nav>
     <?php } ?>
     
-     <?php $post_parent_ID = $post->post_parent; ?>
-     <?php if($post_parent_ID > 0){ 
-           $post_parent = get_post($post_parent_ID);
+    <?php 
+      if(get_previus_page_id() != null){
+        $post_parent = get_post(get_previus_page_id());
     ?>
-     <h3><a href=<?php echo get_permalink($post_parent_ID); ?>> ⬅ <?php echo $post_parent->post_title; ?></a></h3>
+     <h3>
+      <a href=<?php echo get_permalink($post_parent->ID); ?>>
+       ⬅ <?php echo $post_parent->post_title; ?>
+      </a>
+     </h3>
      <?php } ?>
     <h1><?php the_title();  ?></h1>
     <p><?php the_content() ?></p>

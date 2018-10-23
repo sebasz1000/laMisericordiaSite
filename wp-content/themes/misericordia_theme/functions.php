@@ -38,6 +38,16 @@ function has_children(){
   return count($pages); 
 }
 
+//Get previews page link
+
+function get_previus_page_id(){
+  global $post;
+  if($post->post_parent > 0){
+    return $post->post_parent;
+  }
+  return null;
+}
+
 // Get Page ID by slung name
 // get_id_by_slug('any-page-slug');
 

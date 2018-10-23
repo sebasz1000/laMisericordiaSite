@@ -1,4 +1,7 @@
 <?php
+/*
+Template Name:Plantilla Listado
+*/
 get_header();
 ?>
 <main class="page container">
@@ -6,13 +9,21 @@ get_header();
   if(have_posts()) :
     while(have_posts()) : the_post(); ?>
   <article class="post">
-   <?php 
+    
+    <?php 
     $args = array('show_browse' => false, 'show_title' => false, 
                   'labels' => array( 'home' => esc_html__('','') ));
     if ( function_exists( 'breadcrumb_trail' ) ) breadcrumb_trail($args); ?>
     <h1><?php the_title();  ?></h1>
-     <span class='post-info'>Publicado en <?php the_time('F jS, Y'); ?></span>
     <p><?php the_content() ?></p>
+    <?php 
+     $pages = get_pages(array('parent'=>$post->ID));
+      if($pages){
+        foreach($pages as $page){
+    ?>
+      <section><h3><a href=<?php echo get_permalink($page->ID); ?>><?php echo $page->post_title; ?></a></h3></section>
+    <?php } ?>
+    <?php } ?>
   </article>
   <?php
     endwhile;
@@ -24,3 +35,6 @@ get_header();
 <?php
 get_footer();
 ?>
+<?php if(is_page('nuestros-servicios')){ ?>
+      <p>Esto en nuestros servicios</p>
+<?php } ?>

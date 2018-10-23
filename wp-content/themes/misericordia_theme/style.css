@@ -113,6 +113,12 @@ nav.breadcrumb ul li a{
   font-weight: bold;
   margin: 0;
 }
+ul.trail-items li:first-of-type::after{
+  content: '' !important;
+}
+ul.trail-items li::after{
+  content: "<" !important;
+}
 /* Footer */
 footer{
   background-color: #eaeaea;
@@ -175,6 +181,7 @@ main.page article h2{
 
 /*Extra links*/
 #extra-links{
+  display: none; /* disabled temporaly! */
   background-color: #a0a0a0;
   padding: 10px 30px;
   width: 200px;
