@@ -22,7 +22,6 @@ get_header();
      </ul>
     </nav>
     <?php } ?>
-    
     <?php 
       if(get_previus_page_id() != null){
         $post_parent = get_post(get_previus_page_id());

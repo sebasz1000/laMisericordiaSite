@@ -7,7 +7,7 @@ get_header();
     while(have_posts()) : the_post(); ?>
   <article class="post">
     <h1><?php the_title();  ?></h1>
-    <p><?php the_content() ?></p>
+    <p><?php the_content(); ?></p>
     <?php 
      $pages = get_pages(array('child_of'=>$post->ID));
       if($pages){
@@ -27,6 +27,3 @@ get_header();
 <?php
 get_footer();
 ?>
-<?php if(is_page('nuestros-servicios')){ ?>
-      <p>Esto en nuestros servicios</p>
-<?php } ?>

@@ -10,12 +10,18 @@
   
    <header>
      <div class="container" id='site-header'>
-       <div id='main-logo-container'>
-         <h3><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h3>
-         <h5><?php bloginfo('description'); ?></h5>
+      <div class='row'>
+      <small class='align-right col-12'>Calle 43 26-3 , Calarcá-Colombia   <b>CONSULTA EXTERNA</b>  CLL 18N 14-36  <b>PBX</b> (+57) 036 7436722</small>
+      </div>
+      <br>
+      <div class="row">
+       <div id='main-logo-container' class='col-sm-12 col-md-4 col-lg-3'>
+        <figure>
+           <h3><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h3>
+           <h5><?php bloginfo('description'); ?></h5>
+         </figure>
        </div>
-       <div class='align-right'>
-         <small>Calle 43 26-3 , Calarcá-Colombia   <b>CONSULTA EXTERNA</b>  CLL 18N 14-36  <b>PBX</b> (+57) 036 7436722</small>
+       <div class='align-right col-sm-12 col-md-8 col-lg-9' >
          <form action="">
             <input type="text" name="searchText">
             <input type="submit" value="Buscar">
@@ -29,8 +35,16 @@
            ?>
           </nav>
         </div>
+      </div>
      </div> <!--container -->
   </header>
+  <div class="container-fluid color-row">
+    <div class="row">
+       <div class="col-5 blue"></div>
+       <div class="col-4 green"></div>
+       <div class="col-3 pink"></div>
+    </div>
+  </div>
   <aside id='extra-links'>
    <a href=<?php echo get_permalink(get_id_by_slug('notificaciones-judiciales')) ?>>Notificaciones judiciales</a>
    <a href=<?php echo get_permalink(get_id_by_slug('quejas-y-reclamos')) ?>>Quejas y reclamos</a>

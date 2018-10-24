@@ -24,18 +24,31 @@ p{
 line-height: 1.65em
 }
 
+/* COLORS */
+.blue{
+  background-color: #00A0DA;
+}
+.green{
+  background-color: #9EC604;
+}
+.pink{
+  background-color: #FB0084;
+}
 
+.color-row .row{
+  min-height: 8px;
+}
 /*Header */
 
-#site-header{
-  border-bottom: 2px solid #999;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
+#site-header small{
+  color: #6D7A7C;
+  font-size: 0.7em;
+  text-align: right;
 }
 
 #main-logo-container{
-  max-width: 230px;
+  display: flex;
+  justify-content: center;
 }
 
 /* content */
@@ -56,6 +69,9 @@ article.post:last-of-type{
   justify-content:flex-end;
 }
 
+.site-nav ul li{
+  text-transform: uppercase;
+}
 /* clear list style */
 .clear-list-style ul { padding-left: 0; }
 .clear-list-style ul:before, .site-nav ul:after { content:""; display:table; }
@@ -119,46 +135,57 @@ ul.trail-items li:first-of-type::after{
 ul.trail-items li::after{
   content: "<" !important;
 }
+
 /* Footer */
 footer{
-  background-color: #eaeaea;
+  background-color: #063B47;
+  padding: 40px 0;
+  width: 100%;
+  color: #fff;
 }
-
-.site-footer{
+footer .footer-item{
+  margin: 20px 0;
   display: flex;
-  justify-content: space-between;
-  padding: 80px 0;
+  justify-content: center;
+}
+footer .footer-item small{
+color: #10CCFF;
 }
 
 /* Footer Menu */
-.site-footer nav ul { padding: 0; }
-.site-footer nav ul li{ 
+footer nav ul { padding: 0; }
+footer nav ul li{ 
   list-style: none; 
   padding: 4px 0;
 }
 
-.site-footer nav ul li a:link,
-.site-footer nav ul li a:visited{
+footer nav ul li a:link,
+footer nav ul li a:visited{
+  color: #FFF;
   text-decoration: none;
   font-size: 14px;
 }
-.site-footer nav ul li a:hover{
+footer nav ul li a:hover{
   text-decoration: underline;
 }
 
 #footer-contact-block p{
   font-size: 14px;
 }
-
-/*Contact page layout*/
-main#contact{
-display: flex;
+#footer-contact-block{
+  text-align: center;
 }
+
+#logos-footer-container{
+  background-color: #D5E252;
+  min-height: 30px;
+}
+
+
 /* Page layout */
 
 .container{
-  max-width: 1600px; /*920px*/
-  margin: 0 auto;
+  /*max-width: 1600px; /*920px*/
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -171,6 +198,7 @@ main.page article h2{
 }
 /*Quality form box*/
 #quality-form-box{
+  display: none; /*REMOVE!*/
   background-color: #a0a0a0;
   padding: 20px 30px;
   width: 300px;
@@ -203,6 +231,11 @@ border: 1px solid grey;
 }
 
 /*HOME PAGE*/
+
+figure#home-main-image{
+  margin-bottom: 50px;
+  padding: 0;
+}
 
 /** services list**/
 article#services ul{
