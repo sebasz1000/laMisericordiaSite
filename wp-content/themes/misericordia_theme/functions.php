@@ -15,12 +15,6 @@ function theme_resources(){
 
 add_action('wp_enqueue_scripts', 'theme_resources');
 
-//Navigation Menus
-register_nav_menus(array(
-  'primary' => __('Primary Menu'),
-  'general-footer' => __('Footer General Menu'),
-  'info-footer' => __('Footer Info Menu'),
-));
 
 // Get top ancestor
 function get_top_ancestor_id(){
@@ -61,3 +55,23 @@ function get_id_by_slug($page_slug) {
 	} 
     return null;
 }
+
+//theme setup
+function theme_setup(){
+  //Navigation Menus
+  register_nav_menus(array(
+    'primary' => __('Primary Menu'),
+    'general-footer' => __('Footer General Menu'),
+    'info-footer' => __('Footer Info Menu'),
+  ));
+  //Adds feature image support
+  add_theme_support('post-thumbnails');
+  add_image_size('small-thumbnail', 280, 220, true);
+  
+}
+
+add_action('after_setup_theme', 'theme_setup');
+
+
+
+

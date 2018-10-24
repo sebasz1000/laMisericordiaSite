@@ -7,18 +7,19 @@ get_header();
 <main class="page container">
   
   <article id='services'>
-   <h2>Nuestros Servicios</h2>
+   <h2 class="align-center">Nuestros Servicios</h2>
    <br>
-   <ul>
+   <ul class="container">
    <?php
      $top_page_ID = get_id_by_slug('nuestros-servicios');
      $pages = get_pages(array('child_of'=>$top_page_ID));
        if($pages != null){
         foreach($pages as $page){
     ?>
-     <li>
+     <li class="row">
        <a href=<?php echo get_permalink($page->ID); ?> >
-          <h4><?php echo $page->post_title; ?></h4>
+        <figure><?php echo get_the_post_thumbnail($page); ?> </figure>
+        <h4><?php echo $page->post_title; ?></h4>
         </a>
       </li>   
     <?php      

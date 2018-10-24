@@ -14,6 +14,9 @@ body{
 .align-right{
   text-align: right !important;
 }
+.align-center{
+  text-align: center !important;
+}
 
 a:link,
 a:visited{
@@ -240,17 +243,24 @@ figure#home-main-image{
 /** services list**/
 article#services ul{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   padding: 0;
 }
 article#services ul li{
-  min-width: 23%;
+  width:30%;
+  display: flex;
+  justify-content: center;
+  min-width: 276px;
   min-height: 100px;
   padding: 20px 30px;
   text-align: center;
+  
 }
-
+article#services ul li figure img{
+  width: 100%;
+  height: auto;
+}
 
 article#services ul:after { clear: both; }
 article#services ul li{
@@ -276,3 +286,4 @@ nav#services-menu .current_page_item a:visited{
   background-color: #cacaca;
   cursor: default;
 }
+

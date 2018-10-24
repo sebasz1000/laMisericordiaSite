@@ -35,6 +35,3 @@ get_header();
 <?php
 get_footer();
 ?>
-<?php if(is_page('nuestros-servicios')){ ?>
-      <p>Esto en nuestros servicios</p>
-<?php } ?>

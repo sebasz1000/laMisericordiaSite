@@ -13,6 +13,7 @@ get_header();
       if($pages){
         foreach($pages as $page){
     ?>
+      <figure><?php echo get_the_post_thumbnail($page,'small-thumbnail'); ?></figure>
       <section><h3><a href=<?php echo get_permalink($page->ID); ?>><?php echo $page->post_title; ?></a></h3></section>
     <?php } ?>
     <?php } ?>

@@ -32,6 +32,7 @@ get_header();
       </a>
      </h3>
      <?php } ?>
+    <figure><?php the_post_thumbnail(); ?></figure>
     <h1><?php the_title();  ?></h1>
     <p><?php the_content() ?></p>
   </article>
