@@ -3,6 +3,7 @@
   <head>
     <meta charset="<?php bloginfo('charset'); ?>" >
     <meta name="viewport" content="width=device-width">
+    <script src="https://unpkg.com/ionicons@4.4.6/dist/ionicons.js"></script>
     <title><?php bloginfo('name'); ?></title>
     <?php wp_head(); ?>
   </head>
@@ -11,15 +12,15 @@
    <header>
      <div class="container" id='site-header'>
       <div class='row'>
-      <small class='align-right col-12'>Calle 43 26-3 , Calarcá-Colombia   <b>CONSULTA EXTERNA</b>  CLL 18N 14-36  <b>PBX</b> (+57) 036 7436722</small>
+        <small class='align-right col-12'>Calle 43 26-3 , Calarcá-Colombia   <b>CONSULTA EXTERNA</b>  CLL 18N 14-36  <b>PBX</b> (+57) 036 7436722</small>
       </div>
       <br>
       <div class="row">
-       <div id='main-logo-container' class='col-sm-12 col-md-4 col-lg-3'>
+       <div id='main-logo-container' class='col-sm-12 col-md-4 col-lg-3 responsive-site-logo'>
         <figure>
-           <h3><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h3>
-           <h5><?php bloginfo('description'); ?></h5>
-         </figure>
+               <?php if(has_custom_logo()) echo the_custom_logo(); ?>
+        </figure>
+        <h5><?php bloginfo('description'); ?></h5>  
        </div>
        <div class='align-right col-sm-12 col-md-8 col-lg-9' >
          <form action="">

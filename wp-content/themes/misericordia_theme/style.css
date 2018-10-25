@@ -11,6 +11,14 @@ body{
   color: #333;
 }
 
+figure{
+  padding: 0;
+  margin: 0;
+}
+.row{
+  min-height: 2em;
+}
+
 .align-right{
   text-align: right !important;
 }
@@ -37,6 +45,16 @@ line-height: 1.65em
 .pink{
   background-color: #FB0084;
 }
+.light-green{
+  background-color: #D5E252;
+}
+.dark-blue{
+  background-color: #042127;
+}
+
+ion-icon{
+margin-right: 10px;  
+}
 
 .color-row .row{
   min-height: 8px;
@@ -52,6 +70,11 @@ line-height: 1.65em
 #main-logo-container{
   display: flex;
   justify-content: center;
+}
+
+figure a img{
+  width: 80%;
+  height: auto;
 }
 
 /* content */
@@ -145,6 +168,7 @@ footer{
   padding: 40px 0;
   width: 100%;
   color: #fff;
+  padding-bottom: 0;
 }
 footer .footer-item{
   margin: 20px 0;
@@ -173,17 +197,28 @@ footer nav ul li a:hover{
 }
 
 #footer-contact-block p{
-  font-size: 14px;
+  font-size: 0.9em;
 }
-#footer-contact-block{
-  text-align: center;
+#footer-contact-block section{
+  margin-top: 10px;
 }
+
 
 #logos-footer-container{
-  background-color: #D5E252;
-  min-height: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  flex-wrap: wrap;
+  padding: 50px 0;
+}
+#logos-footer-container figure img{
+    padding: 20px;
+    mix-blend-mode: luminosity;
 }
 
+#responsive-footer-cop-info{
+  padding: 40px  0;
+}
 
 /* Page layout */
 

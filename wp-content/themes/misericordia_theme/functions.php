@@ -64,6 +64,8 @@ function theme_setup(){
     'general-footer' => __('Footer General Menu'),
     'info-footer' => __('Footer Info Menu'),
   ));
+  //adds custom site logo
+  add_theme_support('custom-logo');
   //Adds feature image support
   add_theme_support('post-thumbnails');
   add_image_size('small-thumbnail', 280, 220, true);
