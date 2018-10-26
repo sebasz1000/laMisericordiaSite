@@ -3,11 +3,11 @@ get_header();
 ?>
 <figure class='container-fluid' id="home-main-image">
     <img width='100%' src='https://designm.ag/wp-content/uploads/2016/06/victorian_damask_pattern_by_arsgrafik.png' />
-  </figure>
-<main class="page container">
+</figure>
+<main class="page container" id='home-page-content'>
   
   <article id='services'>
-   <h2 class="align-center">Nuestros Servicios</h2>
+   <a href=<?php echo get_permalink(get_page_by_path('nuestros-servicios')); ?>><h2 class="align-center blue-text"><ion-icon name="heart"></ion-icon> Nuestros Servicios</h2></a>
    <br>
    <ul class="container">
    <?php

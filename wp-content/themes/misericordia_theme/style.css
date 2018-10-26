@@ -16,7 +16,7 @@ figure{
   margin: 0;
 }
 .row{
-  min-height: 2em;
+  min-height: 1.6em;
 }
 
 .align-right{
@@ -31,10 +31,16 @@ a:visited{
   color: #006ec3;
 }
 
+article.post{
+  padding: 20px;
+}
 p{
 line-height: 1.65em
 }
 
+.transparent{
+  background-color: transparent !important;
+}
 /* COLORS */
 .blue{
   background-color: #00A0DA;
@@ -52,6 +58,10 @@ line-height: 1.65em
   background-color: #042127;
 }
 
+.blue-text{
+  color: #00A0DA;
+}
+
 ion-icon{
 margin-right: 10px;  
 }
@@ -67,16 +77,40 @@ margin-right: 10px;
   text-align: right;
 }
 
-#main-logo-container{
+figure a img{
+  width: 100%;
+  height: auto;
+  max-width: 160px;
+}
+
+form#search-box{
+  position: relative;
+  display: inline-flex;
+  width: 50%;
+  margin-top: 0.6em;
+}
+.flex-vertical-right{
+  display: flex;
+  align-items: center;
+}
+#search-box input{
+  border: none;
+  background-color: #f0f2f5;
+  padding-left: 3.5em;
+}
+#search-box button{
+  position: absolute;
+  top: 0;
   display: flex;
   justify-content: center;
 }
-
-figure a img{
-  width: 80%;
-  height: auto;
+#search-box button{
+  font-size:1.5em;
 }
 
+button ion-icon{
+  margin: 0;
+}
 /* content */
 
 article.post{
@@ -88,16 +122,7 @@ article.post:last-of-type{
 }
 
 /* Navigation Menus */
-.site-nav ul{
-  margin:0;
-  padding: 0;
-  display: flex;
-  justify-content:flex-end;
-}
 
-.site-nav ul li{
-  text-transform: uppercase;
-}
 /* clear list style */
 .clear-list-style ul { padding-left: 0; }
 .clear-list-style ul:before, .site-nav ul:after { content:""; display:table; }
@@ -112,18 +137,88 @@ article.post:last-of-type{
 }
 
 /* Site Header Menu */
-#site-header nav {  padding: 30px 0;}
+
+header{ padding-top: 12px; }
+
+#menu-hamburguesa{
+  text-align: right;
+}
+
+.dropdown-item:hover,
+.dropdown-item:hover a{
+  background-color: #019fda;
+  color: white;
+}
+.dropdown-item.active,
+.dropdown-item:active,
+.dropdown-item:active a{
+  background-color: #063b47;
+  color: white;
+}
+
+#site-header nav ul{
+  margin:0;
+  padding: 0;
+  display: flex;
+  justify-content:flex-end;
+}
+
+#site-header nav ul li{
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.9em
+}
+
+#site-header nav ul li a:hover{
+  background-color: #f0f2f5;
+}
+#site-header nav ul li a ion-icon{
+  font-size: 1.5em;
+}
+
 #site-header nav ul li a:link,
 #site-header nav ul li a:visited{
   padding: 10px 18px;
   text-decoration: none;
+  display: flex;
+  flex-direction: row-reverse;
 }
-#site-header nav ul li a:hover {  background-color: #ECECEC; }
-#site-header nav ul li.current-menu-item a:link,
-#site-header nav ul li.current-menu-item a:visited,
-#site-header nav ul li.current-page-ancestor a:link,
-#site-header nav ul li.current-page-ancestor a:visited{
+
+#site-header nav ul li.primary-menu-servicios a:link,
+#site-header nav ul li.primary-menu-servicios a:visited{
+  color: #006ec3;
+}
+
+#site-header nav ul li.primary-menu-contrataciones a:link,
+#site-header nav ul li.primary-menu-contrataciones a:visited{
+  color: #9ec604;
+}
+
+#site-header nav ul li.primary-menu-contactanos a:link,
+#site-header nav ul li.primary-menu-contactanos a:visited{
+  color: #fb0084;
+}
+
+#site-header nav ul li.current-menu-item.primary-menu-servicios a:link,
+#site-header nav ul li.current-menu-item.primary-menu-servicios a:visited,
+#site-header nav ul li.current-page-ancestor.primary-menu-servicios a:link,
+#site-header nav ul li.current-page-ancestor.primary-menu-servicios a:visited{
   background-color: #006ec3;
+  color: white;
+}
+
+#site-header nav ul li.current-menu-item.primary-menu-contactanos a:link,
+#site-header nav ul li.current-menu-item.primary-menu-contactanos a:visited,
+#site-header nav ul li.current-page-ancestor.primary-menu-contactanos a:link,
+#site-header nav ul li.current-page-ancestor.primary-menu-contactanos a:visited{
+  background-color: #fb0084;
+  color: white;
+}
+#site-header nav ul li.current-menu-item.primary-menu-contrataciones a:link,
+#site-header nav ul li.current-menu-item.primary-menu-contrataciones a:visited,
+#site-header nav ul li.current-page-ancestor.primary-menu-contrataciones a:link,
+#site-header nav ul li.current-page-ancestor.primary-menu-contrataciones a:visited{
+  background-color: #9ec604;
   color: white;
 }
 /* Breadcrumb nav*/
@@ -220,6 +315,7 @@ footer nav ul li a:hover{
   padding: 40px  0;
 }
 
+
 /* Page layout */
 
 .container{
@@ -232,7 +328,7 @@ main.page article h1{
   font-size: 40px;
 }
 main.page article h2{
-  font-size: 32px;
+  font-size: 2.3rem;
 }
 /*Quality form box*/
 #quality-form-box{
@@ -260,22 +356,26 @@ main.page article h2{
 /* helpers */
 
 .flex{
-display:flex;
+  display:flex;
   justify-content: space-between;
 }
 
-.border{
-border: 1px solid grey;
-}
+.border{ border: 1px solid grey; }
 
 /*HOME PAGE*/
+
+main#home-page-content article{ padding: 4em 0; }
+
+main#home-page-content article h2{ text-transform: uppercase; }
 
 figure#home-main-image{
   margin-bottom: 50px;
   padding: 0;
 }
 
+
 /** services list**/
+
 article#services ul{
   display: flex;
   justify-content: space-around;
