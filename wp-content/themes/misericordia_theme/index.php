@@ -28,7 +28,7 @@ get_header();
     </ul>
   </article>
 </main>
-<div class='maps' style='max-height:450px;'>
+<div class='maps'>
    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2534.67896844873!2d-75.64209763526596!3d4.533065988117725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e38f466fee25c41%3A0x78d3e0fe87674c80!2sHospital+La+Misericordia+de+Calarca!5e0!3m2!1sen!2sco!4v1540326734458" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>
 <?php

@@ -15,60 +15,51 @@ figure{
   padding: 0;
   margin: 0;
 }
-.row{
-  min-height: 1.6em;
-}
+.row{ min-height: 1.6em; }
 
-.align-right{
-  text-align: right !important;
-}
-.align-center{
-  text-align: center !important;
-}
+.align-right{ text-align: right !important; }
+.align-center{ text-align: center !important; }
 
 a:link,
 a:visited{
   color: #006ec3;
 }
 
-article.post{
-  padding: 20px;
-}
-p{
-line-height: 1.65em
+.container-fluid{
+  padding: 0;  
 }
 
-.transparent{
-  background-color: transparent !important;
-}
+.form-control{ background-color: #E5E5E5; }
+
+.form-control.md{ width: 80% !important; }
+
+.form-control:focus{ background-color: #f9fafb; }
+article.post{ padding: 20px; }
+p{ line-height: 1.65em }
+
+.transparent{ background-color: transparent !important; }
+.no-border{ border: none !important; }
+
 /* COLORS */
-.blue{
-  background-color: #00A0DA;
-}
-.green{
-  background-color: #9EC604;
-}
-.pink{
-  background-color: #FB0084;
-}
-.light-green{
-  background-color: #D5E252;
-}
-.dark-blue{
-  background-color: #042127;
-}
 
-.blue-text{
-  color: #00A0DA;
-}
+.blue{ background-color: #00A0DA; }
+.blue h1{ color: #c1efff; }
+.blue h1 ion-icon{ color: #063b47; }
+.green{ background-color: #9EC604; }
+.green h1{ color: #f7ffd7; }
+.green h1 ion-icon{ color: #3e4e00; }
+.pink-text{ color: #FB0084 }
+.pink{ background-color:#FB0084; }
+.pink.btn:hover{ background-color: #dc0074; }
+.pink h1 { color: #ffd8ec; }
+.pink h1 ion-icon{ color: #6b004d; }
+.light-green{ background-color: #D5E252; }
+.dark-blue{  background-color: #042127; }
+.blue-text{ color: #00A0DA; }
 
-ion-icon{
-margin-right: 10px;  
-}
+ion-icon{ margin-right: 10px;   }
 
-.color-row .row{
-  min-height: 8px;
-}
+.color-row .row{  min-height: 8px;  }
 /*Header */
 
 #site-header small{
@@ -315,6 +306,19 @@ footer nav ul li a:hover{
   padding: 40px  0;
 }
 
+/*CONTACTANOS PAGE*/
+
+
+#contact-info-box{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 1em;
+}
+
+#contact-maps-iframe{
+  min-height: 900px;
+}
 
 /* Page layout */
 
@@ -325,11 +329,38 @@ footer nav ul li a:hover{
 }
 
 main.page article h1{
-  font-size: 40px;
+  display: flex;
+  align-items: center;
+  font-size: 4em;
+    margin-bottom: 1em;
+}
+main.page article h1 ion-icon{
+  margin-right: 0.3em;
 }
 main.page article h2{
   font-size: 2.3rem;
 }
+
+#page-title{
+  padding: 2.2em 28px;
+}
+#page-title h1{
+  display: flex;
+  align-items: center;
+  font-size: 3em;
+}
+#page-title p.left-infobox{ margin-left: 0; }
+
+#page-title p{
+  margin-left: 7em;
+  color: white;
+  max-width: 680px;
+}
+#page-title h1 ion-icon{ 
+  margin-right: 0.2em; 
+  font-size: 2em;
+}
+
 /*Quality form box*/
 #quality-form-box{
   display: none; /*REMOVE!*/
@@ -421,4 +452,6 @@ nav#services-menu .current_page_item a:visited{
   background-color: #cacaca;
   cursor: default;
 }
+
+
 

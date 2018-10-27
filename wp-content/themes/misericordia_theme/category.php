@@ -3,12 +3,16 @@
 Template Name:Plantilla Listado
 */
 get_header();
+$category_name = (is_category('novedades') ? 'Novedades' : 'Contrataciones');
 ?>
+<div class="container-fluid green">
+ <div class="container" id='page-title'>
+ 
+    <h1><ion-icon name=<?php echo is_category('novedades') ? 'megaphone' : 'people'; ?>></ion-icon><?php echo $category_name; ?></h1>
+    <p>Aquí encontrarás toda las <?php echo $category_name ?> de nuestro hospital</p>
+ </div>
+</div>
 <main class="page container">
-  <?php 
-  $category_name = (is_category('novedades') ? 'Novedades' : 'Contrataciones'); ?>
-  <h2><?php echo $category_name ?></h2>
-  <p>Aquí van todas las <?php echo $category_name ?> del hospital</p>
   <?php
   if(have_posts()) :
     while(have_posts()) : the_post(); ?>
