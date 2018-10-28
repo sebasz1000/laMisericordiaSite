@@ -84,14 +84,7 @@
        <div class="col-3 pink"></div>
     </div>
   </div>
-  <?php if(!is_front_page()){ ?>
-  <div class="container">
-      <?php 
-        $args = array('show_browse' => false, 'show_title' => false, 
-                      'labels' => array( 'home' => esc_html__('','') ));
-        if ( function_exists( 'breadcrumb_trail' ) ) breadcrumb_trail($args); ?>
-  </div> 
-  <?php } ?>
+
   <aside id='extra-links'>
    <a href=<?php echo get_permalink(get_id_by_slug('notificaciones-judiciales')) ?>>Notificaciones judiciales</a>
    <a href=<?php echo get_permalink(get_id_by_slug('quejas-y-reclamos')) ?>>Quejas y reclamos</a>
