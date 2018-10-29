@@ -70,6 +70,8 @@ function theme_setup(){
   //Adds feature image support
   add_theme_support('post-thumbnails');
   add_image_size('small-thumbnail', 280, 220, true);
+  //adds except function por pages
+  add_post_type_support( 'page', 'excerpt' );
   
 }
 

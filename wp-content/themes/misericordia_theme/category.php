@@ -33,10 +33,10 @@ $category_name = (is_category('novedades') ? 'Novedades' : 'Contrataciones');
   </figure>
   
   <div class="post-content col-12 col-md-7">
-    <h2><a href=<?php the_permalink(); ?>><?php the_title(); ?></a></h2>
+     <h2><a href=<?php the_permalink(); ?>><?php the_title(); ?></a></h2>
      <small>Publicado el <?php echo the_date('j F, Y'); ?></small>
      <small class="float-right">Ultima modificación: <?php echo the_modified_date('j F, Y'); ?></small>
-    <p><?php  the_excerpt(); ?></p>
+     <p><?php  the_excerpt(); ?></p>
     <a class='btn btn-primary green float-right' href=<?php echo the_permalink(); ?> >Continuar leyendo <ion-icon name="arrow-forward"></ion-icon></a>
   </div>
   </section>

@@ -65,6 +65,7 @@ p{ line-height: 1.65em }
 .pink h1 { color: #ffd8ec; }
 .pink h1 ion-icon{ color: #6b004d; }
 .light-green{ background-color: #D5E252; }
+.light-blue{ background-color: #f0f8ff; }
 .dark-blue{  background-color: #042127; }
 .blue-text{ color: #00A0DA; }
 .green-text{ color: #9EC604; }
@@ -124,7 +125,9 @@ button ion-icon{
 .clear-list-style ul li{
   list-style: none;
 }
-
+.clear-list-style ul li:hover{
+  text-decoration: underline;
+}
 .clear-list-style a:link,
 .clear-list-style a:visited{
   text-decoration: none;
@@ -196,7 +199,9 @@ header{ padding-top: 12px; }
 #site-header nav ul li.current-menu-item.primary-menu-servicios a:link,
 #site-header nav ul li.current-menu-item.primary-menu-servicios a:visited,
 #site-header nav ul li.current-page-ancestor.primary-menu-servicios a:link,
-#site-header nav ul li.current-page-ancestor.primary-menu-servicios a:visited{
+#site-header nav ul li.current-page-ancestor.primary-menu-servicios a:visited,
+#site-header nav ul li.current-menu-parent.primary-menu-servicios a:link,
+#site-header nav ul li.current-menu-parent.primary-menu-servicios a:visited{
   background-color: #006ec3;
   color: white;
 }
@@ -353,12 +358,22 @@ main.page article h2{
 }
 
 #page-title{
-  padding: 2.2em 28px;
+  padding: 2.2em 12px;
+}
+#page-title.servicio h1{
+  color: #063b47;
+}
+
+#page-title figure img{
+  width: 100%;
+  height: auto;
+  max-width: 320px;
+  min-width: 320px;
 }
 #page-title h1{
   display: flex;
   align-items: center;
-  font-size: 3.6em;
+  font-size: 4.4em;
 }
 #page-title p.left-infobox{ margin-left: 0; }
 
@@ -465,22 +480,62 @@ article#services ul li{
 
 /* SERVICES PAGE */
 
-nav#services-menu{
-  display: block;
-  padding: 10px 20px;
-  background-color: #eaeaea;
-  max-width: 300px;
-  font-size: 0.9em;
-  float: right;
+main#servicios-template article section { 
+  margin: 1.5em 0;
+  border-bottom: #eff8ff 8px solid;
+  position: relative;
 }
+
+main#servicios-template article section figure{
+  margin-right: 2em;
+  background-color: aliceblue;
+  text-align: center;
+}
+main#servicios-template article section figure img{
+  min-width: 360px;
+  height: auto;
+}
+main#servicios-template article section div.text{
+  margin-top: 1em;
+}
+main#servicios-template article section div.text  a.btn:link,
+main#servicios-template article section div.text  a.btn:visited
+{
+  color: black;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+main#servicios-template article section div.text h2{
+  font-weight: bold;
+  margin-bottom: 0.7em;
+}
+nav#services-menu{
+    display: block;
+    padding: 6px 38px;
+    background-color: #eff8ff;
+    max-width: 258px;
+    font-size: 0.9em;
+    float: right;
+    border-left: 1px solid #10778d;
+}
+
 nav#services-menu ul li{
+  list-style: square !important;
   margin: 6px 0px;
+  color: #10778e;
+}
+nav#services-menu  a:link,
+nav#services-menu a:visited{
+  color: #10778e;
 }
 nav#services-menu .current_page_item a:link,
 nav#services-menu .current_page_item a:visited{
   font-weight: bold;
-  background-color: #cacaca;
+  color: #063b47;
   cursor: default;
+  text-decoration: underline;
 }
 
 /* POST ITEM */
