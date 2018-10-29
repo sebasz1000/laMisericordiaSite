@@ -40,7 +40,6 @@ $category_name = (is_category('novedades') ? 'Novedades' : 'Contrataciones');
     <a class='btn btn-primary green float-right' href=<?php echo the_permalink(); ?> >Continuar leyendo <ion-icon name="arrow-forward"></ion-icon></a>
   </div>
   </section>
-  </div>
   <?php
     endwhile;
   else : 

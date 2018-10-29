@@ -259,7 +259,6 @@ ul.trail-items li::after{
 /* Footer */
 footer{
   background-color: #063B47;
-  padding: 40px 0;
   width: 100%;
   color: #fff;
   padding-bottom: 0;
@@ -374,22 +373,41 @@ main.page article h2{
 }
 
 /*Quality form box*/
-#quality-form-box{
-  display: none; /*REMOVE!*/
-  background-color: #a0a0a0;
-  padding: 20px 30px;
-  width: 300px;
+#poll{
+  background-color: #00a0da;
+  padding: 24px 26px;
+  max-width: 330px;
   position: fixed;
-  bottom:7%;
-  right: 3%;
+  /*right: 3%;*/
+  bottom: 1em;
+  right: 1em;
+  box-shadow: 1px 2px 9px 1px #a9a9a9;;
 }
+#poll h3{
+  color: white;
+  margin: 1.3em 0 0.2em 0;;
+  font-size: 1.35em;
+  text-align: center;
+  font-weight: bold;
+}
+
+#poll-toggle-btn{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0;
+  display: inline-flex;
+    justify-content: flex-end;
+}
+
+#icon-down{ display: none; }
 
 /*Extra links*/
 #extra-links{
   display: none; /* disabled temporaly! */
   background-color: #a0a0a0;
   padding: 10px 30px;
-  width: 200px;
+  max-width: 200px;
   position: fixed;
   top:128px;
   left: 3%;

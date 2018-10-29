@@ -5,16 +5,16 @@ Description: Enqueue all styles and scripts for theme
 Author: Juan Sebastián Zapata
 */
 
-
 function theme_resources(){
   wp_enqueue_style('bootstrap', get_stylesheet_directory_uri() . '/bootstrap-4.1.3-dist/css/bootstrap.min.css');
-   wp_enqueue_style('style', get_stylesheet_uri());
+  wp_enqueue_style('style', get_stylesheet_uri());
+  wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.3.1.slim.min.js');
+  wp_enqueue_script('popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js');
   wp_enqueue_script('bootstrap', get_stylesheet_directory_uri() . '/bootstrap-4.1.3-dist/js/bootstrap.min.js');
-  
+  wp_enqueue_script('custom-scripts', get_stylesheet_directory_uri() . '/js/custom-scripts.js', array('jquery'));
 }
 
 add_action('wp_enqueue_scripts', 'theme_resources');
-
 
 // Get top ancestor
 function get_top_ancestor_id(){

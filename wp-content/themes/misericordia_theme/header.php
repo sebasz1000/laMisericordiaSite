@@ -90,6 +90,5 @@
    <a href=<?php echo get_permalink(get_id_by_slug('quejas-y-reclamos')) ?>>Quejas y reclamos</a>
    <a href=''>Descarga nuestro boletín</a>
   </aside>
-
-   
+  <div class='position-relative'><!--This div mantains poll container stick to the bottom but to the footer! -->  
   

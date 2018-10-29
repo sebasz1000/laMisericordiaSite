@@ -1,0 +1,32 @@
+#polls-2{
+  display: none;
+}
+.wp-polls-form ul li label {
+  margin-left: 1em;
+  color: white;
+  font-weight: bold;
+}
+.wp-polls-form ul li{ list-style: none; }
+
+.wp-polls-ul  li{
+  color: white;
+}
+
+form.wp-polls-form p, .wp-polls p{
+  color: #c1efff;
+  font-size:0.9em;
+}
+
+form.wp-polls-form p a::after{ content: ' »'; }
+form.wp-polls-form p a:link, form.wp-polls-form p a:visited{ 
+  color:  #c1efff;
+  text-decoration: underline;
+}
+
+.wp-polls-loading {
+    display: none;
+    text-align: center;
+    height: 16px;
+    line-height: 16px;
+}
+
