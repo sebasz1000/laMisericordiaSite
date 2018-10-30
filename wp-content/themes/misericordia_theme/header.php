@@ -24,10 +24,7 @@
          </div>
          <div class="row"></div>
          <div class="row">
-           <form action="" id='search-box' class='rounded col-12'>
-               <button type="submit" class="btn transparent" ><ion-icon  name="search"></ion-icon></button>
-               <input type="text" name="searchText" placeholder="Buscar" class="form-control">    
-           </form>
+            <?php get_search_form(); ?>
          </div>
         </div>
        <div class='col-sm-12 col-md-8 col-lg-9' >

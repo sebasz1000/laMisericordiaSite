@@ -23,7 +23,7 @@ get_header();
     <section class='d-sm-block d-md-flex flex-row'>
       <figure>
       <a href=<?php echo get_permalink($page->ID); ?>>
-      <?php echo get_the_post_thumbnail($page,'small-thumbnail'); ?>
+      <?php echo get_the_post_thumbnail($page); ?>
       </a>
       </figure>
       <div class="text">

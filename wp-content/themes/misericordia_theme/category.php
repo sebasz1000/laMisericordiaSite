@@ -4,6 +4,7 @@ Template Name:Plantilla Listado
 */
 get_header();
 $category_name = (is_category('novedades') ? 'Novedades' : 'Contrataciones');
+
 ?>
 <div class="container-fluid green">
  <div class="container" id='page-title'>
@@ -33,6 +34,18 @@ $category_name = (is_category('novedades') ? 'Novedades' : 'Contrataciones');
   </figure>
   
   <div class="post-content col-12 col-md-7">
+   <?php 
+    $status_color = '';
+    $post_status = get_post_meta($post->ID, 'Estado', true);
+
+    if($post_status != null){
+      $status_color = (strtolower($post_status) == 'activo' ? 'active-post-status' : 'dead-post-status');
+    }
+    if($post_status != null) : ?>
+    <span class='<?php echo $status_color; ?> post-status' >
+    <?php echo strtoupper($post_status); ?>
+    </span>
+    <?php endif; ?>
      <h2><a href=<?php the_permalink(); ?>><?php the_title(); ?></a></h2>
      <small>Publicado el <?php echo the_date('j F, Y'); ?></small>
      <small class="float-right">Ultima modificación: <?php echo the_modified_date('j F, Y'); ?></small>

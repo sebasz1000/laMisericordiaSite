@@ -72,6 +72,7 @@ p{ line-height: 1.65em }
 ion-icon{ margin-right: 10px;   }
 
 .color-row .row{  min-height: 8px;  }
+.color-row .high{  min-height: 20px;  }
 /*Header */
 
 #site-header small{
@@ -361,6 +362,7 @@ main.page article h2{
   padding: 2.2em 12px;
 }
 #page-title.servicio h1{
+  margin-left: 0.5em;
   color: #063b47;
 }
 
@@ -373,7 +375,7 @@ main.page article h2{
 #page-title h1{
   display: flex;
   align-items: center;
-  font-size: 4.4em;
+  font-size: 4.1em;
 }
 #page-title p.left-infobox{ margin-left: 0; }
 
@@ -445,7 +447,6 @@ main#home-page-content article{ padding: 4em 0; }
 main#home-page-content article h2{ text-transform: uppercase; }
 
 figure#home-main-image{
-  margin-bottom: 50px;
   padding: 0;
 }
 
@@ -492,8 +493,10 @@ main#servicios-template article section figure{
   text-align: center;
 }
 main#servicios-template article section figure img{
-  min-width: 360px;
-  height: auto;
+  min-width: 322px;
+    height: auto;
+    width: 100%;
+    padding: 1em;
 }
 main#servicios-template article section div.text{
   margin-top: 1em;
@@ -562,7 +565,7 @@ section.post-item figure a img{
 }
 
 section.post-item .post-content{
-  width: 70%;
+  /*width: 70%;*/
   padding: 0.7em;
 }
 
@@ -572,6 +575,16 @@ section.post-item .post-content{
 section.post-item .post-content small, article.post .post-head small{ color: #6b6b6b; }
 
 /* POST */
+
+span.post-status{
+  position: absolute;
+  top: 18px;
+  right: 13px;
+  color: white;
+  padding: 0.6em;
+  font-weight: bold;
+  font-size: 0.7em;
+}
 
 .dead-post-status{ background-color: #697d9b; }
 .active-post-status{ background-color: #a6e202; }
@@ -600,3 +613,8 @@ article.post .post-head span{
 
 article.post .post-head ion-icon{ font-size: 4.7em; }
 
+.search-query-text{
+  text-transform: capitalize;
+  text-decoration: underline;
+  color: #006ec3;
+}

@@ -19,11 +19,11 @@ get_header();
      <?php } ?>
   </div>
   <div class="row">
-   <div class="d-md-block d-md-block d-lg-flex col-s-12 col-md-8">
+   <div class="d-md-block d-md-block d-lg-flex col-s-12 col-md-9">
     <figure><?php echo the_post_thumbnail(); ?></figure>
     <h1><?php the_title();  ?></h1>
    </div>
-   <div class="d-none d-md-block col-md-4 ">
+   <div class="d-none d-md-block col-md-3 ">
           <?php if( has_children()  OR $post->post_parent > 0 ){ ?>
    <nav id="services-menu" class="clear-list-style">
     <ul>

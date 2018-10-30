@@ -2,8 +2,15 @@
 get_header();
 ?>
 <figure class='container-fluid' id="home-main-image">
-    <img width='100%' src='https://designm.ag/wp-content/uploads/2016/06/victorian_damask_pattern_by_arsgrafik.png' />
+    <img width='100%' src=<?php echo get_template_directory_uri() . '/static/front-page-img.jpeg' ?> />
 </figure>
+  <div class="container-fluid color-row">
+    <div class="row high">
+       <div class="col-5 blue"></div>
+       <div class="col-4 green"></div>
+       <div class="col-3 pink"></div>
+    </div>
+  </div>
 <main class="page container" id='home-page-content'>
   
   <article id='services'>
