@@ -70,7 +70,13 @@ p{ line-height: 1.65em }
 .blue-text{ color: #00A0DA; }
 .green-text{ color: #9EC604; }
 ion-icon{ margin-right: 10px;   }
-
+.grey{ 
+  background-color: #6b757e;
+  border: none !important;
+  color: white !important;
+}
+.grey h1{ color: #f4faff; }
+.grey h1 ion-icon{ color: #33383e; }
 .color-row .row{  min-height: 8px;  }
 .color-row .high{  min-height: 20px;  }
 /*Header */
@@ -138,8 +144,9 @@ button ion-icon{
 
 header{ padding-top: 12px; }
 
-#menu-hamburguesa{
-  text-align: right;
+#secondary-menu-set{
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .dropdown-item:hover,

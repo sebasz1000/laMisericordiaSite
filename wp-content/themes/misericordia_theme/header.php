@@ -36,16 +36,29 @@
                <input type="text" name="searchText" placeholder="Buscar" class="form-control">    
            </form>
         </div> 
-        <div class="dropdown dropleft" id='menu-hamburguesa'>
-            <button class="btn dropdown-toggle" id='hamburger' type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <ion-icon name='menu' size='large'></ion-icon></button>
-            <?php 
-              $args = array(
-                'theme_location' => 'hamburguer',
-                'menu_class' => 'dropdown-menu'
-              );
-              wp_nav_menu($args);
-            ?>
+        <div class="d-flex" id='secondary-menu-set'>
+           <div class="dropdown-secondary">
+              <button class="btn btn-secondary dropdown-toggle" id='secondary-dropdown-btn' type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Publicación de Informes</button>
+              <?php 
+                $args = array(
+                  'theme_location' => 'secondary',
+                  'menu_id' => 'secondary-menu',
+                  'menu_class' => 'dropdown-menu dropdown-menu-right'
+                );
+                wp_nav_menu($args)
+              ?>
            </div>
+           <div class="dropdown">
+             <button class="btn dropdown-toggle" id='hamburger' type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <ion-icon name='menu' size='large'></ion-icon></button>
+              <?php 
+                $args = array(
+                  'theme_location' => 'hamburguer',
+                  'menu_class' => 'dropdown-menu dropdown-menu-right'
+                );
+                wp_nav_menu($args);
+              ?>
+             </div>
+        </div>
          <nav class='clear-list-style'>
           <?php 
            $args = array(

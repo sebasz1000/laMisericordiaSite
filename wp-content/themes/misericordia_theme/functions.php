@@ -5,6 +5,9 @@ Description: Enqueue all styles and scripts for theme
 Author: Juan Sebastián Zapata
 */
 
+
+ 
+
 function theme_resources(){
   wp_enqueue_style('bootstrap', get_stylesheet_directory_uri() . '/bootstrap-4.1.3-dist/css/bootstrap.min.css');
   wp_enqueue_style('style', get_stylesheet_uri());
@@ -64,6 +67,7 @@ function theme_setup(){
   //Navigation Menus
   register_nav_menus(array(
     'primary' => __('Primary Menu'),
+    'secondary' => __('Secondary Menu'),
     'hamburguer' => __('Botón Hamburguesa'),
     'general-footer' => __('Footer General Menu'),
     'info-footer' => __('Footer Info Menu'),
@@ -75,11 +79,10 @@ function theme_setup(){
   add_image_size('small-thumbnail', 280, 220, true);
   //adds except function por pages
   add_post_type_support( 'page', 'excerpt' );
+
   
 }
 
 add_action('after_setup_theme', 'theme_setup');
-
-
 
 
