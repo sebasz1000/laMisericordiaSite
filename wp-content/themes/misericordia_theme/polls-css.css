@@ -1,16 +1,24 @@
+#polls-result-page{ zoom: 1.8; }
+#polls-result-page .wp-polls p{
+  color: black;
+}
+#polls-result-page form.wp-polls-form p, #polls-result-page .wp-polls-ul li{
+  color: #6d757d;
+}
+
+#polls-result-page .wp-polls-ul ul li{ color: black; }
+
 #polls-2{
   display: none;
 }
-.wp-polls-form ul li label {
+.wp-polls-form li label {
   margin-left: 1em;
   color: white;
   font-weight: bold;
 }
 .wp-polls-form ul li{ list-style: none; }
 
-.wp-polls-ul  li{
-  color: white;
-}
+.wp-polls-ul li{ color: white; }
 
 form.wp-polls-form p, .wp-polls p{
   color: #c1efff;
@@ -29,4 +37,5 @@ form.wp-polls-form p a:link, form.wp-polls-form p a:visited{
     height: 16px;
     line-height: 16px;
 }
+
 

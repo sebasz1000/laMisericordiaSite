@@ -15,7 +15,7 @@ figure{
   padding: 0;
   margin: 0;
 }
-.row{ min-height: 1.6em; }
+.row{ min-height: 9px; }
 
 .align-right{ text-align: right !important; }
 .align-center{ text-align: center !important; }
@@ -29,6 +29,11 @@ a:visited{
   padding: 0;  
 }
 
+
+.nav-previous, .nav-next{
+  display: flex;
+  align-items:center; 
+}
 .divider{
   width: 100%;
   height: 1px;
@@ -77,6 +82,7 @@ ion-icon{ margin-right: 10px;   }
 }
 .grey h1{ color: #f4faff; }
 .grey h1 ion-icon{ color: #33383e; }
+.ligth-grey{ background-color: #e7ecef; }
 .color-row .row{  min-height: 8px;  }
 .color-row .high{  min-height: 20px;  }
 /*Header */
@@ -231,12 +237,14 @@ header{ padding-top: 12px; }
 /* Breadcrumb nav*/
 
 #breadcrumb{
-  margin-top: 1em;
   padding-left: 1em;
+  font-size: 0.9em;
 }
+.delimiter{ margin: 0 0.6em; }
 nav.breadcrumb{
   margin-bottom: 60px;
 }
+.delimiter1{ margin: 0 0.2em; }
 nav.breadcrumb, nav.breadcrumb ul{
   display: flex;
   justify-content: flex-start;
@@ -423,6 +431,11 @@ main.page article h2{
   display: inline-flex;
     justify-content: flex-end;
 }
+a.poll-archive-anchor:visited, a.poll-archive-anchor:link {
+  color: #006186;
+  text-decoration: underline;
+  margin-right: 1.5em;
+}
 
 #icon-down{ display: none; }
 
@@ -449,7 +462,7 @@ main.page article h2{
 
 /*HOME PAGE*/
 
-main#home-page-content article{ padding: 4em 0; }
+main#home-page-content article{ padding: 5em 0 3em 0; }
 
 main#home-page-content article h2{ text-transform: uppercase; }
 
@@ -458,8 +471,10 @@ figure#home-main-image{
 }
 
 
-/** services list**/
-
+/** services home list**/
+article#services{
+  background-color: #f0f2f5;
+}
 article#services ul{
   display: flex;
   justify-content: space-around;
@@ -485,6 +500,22 @@ article#services ul:after { clear: both; }
 article#services ul li{
   list-style: none;
 }
+
+/*novedades home list */
+article#novedades h2{
+  color: #93c900;
+  font-size: 2.3rem;
+}
+article#novedades section figure{
+  margin: 0;
+  padding: 0;
+}
+article#novedades section .post-content{
+  background-color: #f4ffd3;
+  padding-left: 2em;
+}
+
+
 
 /* SERVICES PAGE */
 

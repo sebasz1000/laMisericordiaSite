@@ -2,9 +2,11 @@ jQuery(document).ready(function($) {
 
 //For style of pool buttons
 const votebtn = document.getElementsByClassName('Buttons')[0];
+  if(votebtn != null){
 votebtn.classList.add('btn');
 votebtn.classList.add('btn-warning');
 votebtn.classList.add('btn-block');
+  }
 
   //toggle btn
 
@@ -31,4 +33,4 @@ $(document).scroll(function() {
     checkOffset();
 });
   
-})
+});

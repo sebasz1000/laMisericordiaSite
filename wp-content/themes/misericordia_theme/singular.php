@@ -16,11 +16,10 @@ if($post_status != null){
 }
 
 ?>
-<div class="container" id='breadcrumb'>
-      <?php 
-        $args = array('show_browse' => false, 'show_title' => false, 
-                      'labels' => array( 'home' => esc_html__('','') ));
-        if ( function_exists( 'breadcrumb_trail' ) ) breadcrumb_trail($args); ?>
+<div class="container-fluid ligth-grey" id='breadcrumb'>
+  <div class="container">
+  <?php  if (function_exists('wp_bac_breadcrumb')) wp_bac_breadcrumb();  ?>
+  </div>
 </div> 
 <main class="page container">
   <?php

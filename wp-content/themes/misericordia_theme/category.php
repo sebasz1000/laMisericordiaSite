@@ -31,11 +31,12 @@ switch($cat_name){
 </div>
 <main class="page container">
  <article>
+      <div class="nav-previous  float-left"><?php previous_posts_link( '« Anterior' ); ?></div>
+      <div class="nav-next  float-right"><?php next_posts_link( 'Siguiente »'  ); ?></div>
   <?php
   if(have_posts()) :
     while(have_posts()) : the_post(); ?>
   <section class="post-item">
-  <div class="row">
   <figure class="col-12 col-md-5">
    <a href=<?php echo the_permalink(); ?> >
     <?php if(!has_post_thumbnail($post)){ ?>
@@ -65,9 +66,14 @@ switch($cat_name){
      <p><?php  the_excerpt(); ?></p>
     <a class='btn btn-primary <?php echo $color;?> float-right' href=<?php echo the_permalink(); ?> >Continuar leyendo <ion-icon name="arrow-forward"></ion-icon></a>
   </div>
+  
   </section>
   <?php
     endwhile;
+    ?>
+      <div class="nav-previous  float-left"><?php previous_posts_link( '« Anterior' ); ?></div>
+      <div class="nav-next  float-right"><?php next_posts_link( 'Siguiente »'  ); ?></div>
+    <?php
   else : 
     echo '<p> There is not content to display </p>';
   endif;  

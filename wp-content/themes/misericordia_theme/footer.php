@@ -1,25 +1,26 @@
 <?php if ( function_exists( 'vote_poll' ) && ! in_pollarchive() ): ?>
   <aside id='poll'class='rounded'>
-   <h3>¡Danos tu opinión!  :) </h3>
+   <h3 class="d-inline-flex"><ion-icon name="happy" size='large'></ion-icon> ¡Danos tu opinión! </h3>
 <?php  get_poll(2); ?>
-    <button id='poll-toggle-btn' type="button" class="btn btn-warning btn-block" data-toggle="button" aria-pressed="false" autocomplete="off">
+  <button id='poll-toggle-btn' type="button" class="btn btn-warning btn-block" data-toggle="button" aria-pressed="false" autocomplete="off">
   <ion-icon id='icon-down' name='arrow-dropdown' size='large'></ion-icon>
   <ion-icon id='icon-up' name='arrow-dropup' size='large'></ion-icon>
   </button>
+  <?php $page_id = get_id_by_slug('pollsarchive'); ?>
+  <a class="poll-archive-anchor float-right" href=<?php echo get_permalink($page_id); ?>><small>Más detalle</small></a>
   </aside>
 <?php endif; ?>
 
-<div class="container-fluid color-row">
-  <div class="row">
-     <div class="col-5 blue"></div>
-     <div class="col-4 green"></div>
-     <div class="col-3 pink"></div>
-  </div>
-</div>
+
 </div><!--This close div mantains poll container stick to the bottom but to the footer! -->
  
 <footer id='footer' class="position-relative">
  <div class="container-fluid light-green" >
+     <div class="row color-row">
+     <div class="col-5 blue"></div>
+     <div class="col-4 green"></div>
+     <div class="col-3 pink"></div>
+  </div>
     <div class="container" style='padding:0;' >
      <br>
       <div id='logos-footer-container'>
