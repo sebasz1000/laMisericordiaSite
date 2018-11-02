@@ -1,12 +1,27 @@
 jQuery(document).ready(function($) {
 
+  
+     var servicioLink = document.getElementsByClassName('primary-menu-servicios')[0].getElementsByTagName('a')[0];
+            var servicioIcon = document.createElement('ion-icon');
+             servicioIcon.setAttribute('name','heart');
+            servicioLink.appendChild(servicioIcon);
+             var contratacionesLink = document.getElementsByClassName('primary-menu-contrataciones')[0].getElementsByTagName('a')[0];
+            var contratacionesIcon = document.createElement('ion-icon');
+             contratacionesIcon.setAttribute('name','people');
+            contratacionesLink.appendChild(contratacionesIcon);
+             var contactanosoLink = document.getElementsByClassName('primary-menu-contactanos')[0].getElementsByTagName('a')[0];
+            var  contactanosIcon = document.createElement('ion-icon');
+             contactanosIcon.setAttribute('name','call');
+            contactanosoLink.appendChild(contactanosIcon);
+  
+  
 //For style of pool buttons
 const votebtn = document.getElementsByClassName('Buttons')[0];
   if(votebtn != null){
 votebtn.classList.add('btn');
 votebtn.classList.add('btn-warning');
 votebtn.classList.add('btn-block');
-  }
+}
 
   //toggle btn
 
@@ -21,16 +36,20 @@ votebtn.classList.add('btn-block');
 
 
 //keeps pool container fixed but over footer
-function checkOffset() {
-    if($('#poll').offset().top + $('#poll').height() 
-                                           >= $('#footer').offset().top - 10)
-        $('#poll').css('position', 'absolute');
+function checkOffset(elementID) {
+    if($(elementID).offset().top + $(elementID).height() 
+                                           >= $('#footer').offset().top - 4)
+        $(elementID).css('position', 'absolute');
     if($(document).scrollTop() + window.innerHeight < $('#footer').offset().top)
-        $('#poll').css('position', 'fixed'); // restore when you scroll up
+        $(elementID).css('position', 'fixed'); // restore when you scroll up
 }
 
 $(document).scroll(function() {
-    checkOffset();
+    checkOffset('#poll');
+});
+  
+$(document).scroll(function() {
+    checkOffset('#extra-links');
 });
   
 });

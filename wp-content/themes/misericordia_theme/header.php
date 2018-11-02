@@ -13,30 +13,15 @@
      <div class="container" >
       <div class="row">
        <div id='main-logo-container' class='col-5 col-md-4 col-lg-3 responsive-site-logo'>
-        <figure>
-               <?php if(has_custom_logo()) echo the_custom_logo(); ?>
-        </figure>
+        <figure><?php if(has_custom_logo()) echo the_custom_logo(); ?> </figure>
         <h5><?php bloginfo('description'); ?></h5>  
        </div>
-       <div class='col-7 col-md-8 col-lg-9 d-block d-sm-block d-md-none align-right' > <!-- Search bar for small screens -->
-         <div class="row">
+       <div class='col-7 col-md-8 col-lg-9 d-block  align-right' > <!-- Search bar for small screens -->
+         <div class="row d-block">
             <small class='align-right col-12'>Calle 43 26-3 , Calarcá-Colombia   <b>CONSULTA EXTERNA</b>  CLL 18N 14-36  <b>PBX</b> (+57) 036 7436722</small>
-         </div>
-         <div class="row"></div>
-         <div class="row">
-            <?php get_search_form(); ?>
-         </div>
-        </div>
-       <div class='col-sm-12 col-md-8 col-lg-9' >
-        <div class='rounded d-none d-md-block align-right '> <!-- Search bar for large screens -->
-           <small class='align-right'>Calle 43 26-3 , Calarcá-Colombia   <b>CONSULTA EXTERNA</b>  CLL 18N 14-36  <b>PBX</b> (+57) 036 7436722</small>
-           <br>
-           <form action="" id='search-box' class='rounded'>
-               <button type="submit" class="btn transparent" ><ion-icon  name="search"></ion-icon></button>
-               <input type="text" name="searchText" placeholder="Buscar" class="form-control">    
-           </form>
-        </div> 
-        <div class="d-flex" id='secondary-menu-set'>
+            <?php  get_search_form(); ?>
+         
+           <div class="d-flex" id='secondary-menu-set'>
            <div class="dropdown-secondary">
               <button class="btn btn-secondary dropdown-toggle" id='secondary-dropdown-btn' type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Publicación de Informes</button>
               <?php 
@@ -49,7 +34,7 @@
               ?>
            </div>
            <div class="dropdown">
-             <button class="btn dropdown-toggle" id='hamburger' type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <ion-icon name='menu' size='large'></ion-icon></button>
+             <button class="btn dropdown-toggle transparent" id='hamburger' type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <ion-icon name='menu' size='large'></ion-icon></button>
               <?php 
                 $args = array(
                   'theme_location' => 'hamburguer',
@@ -58,7 +43,12 @@
                 wp_nav_menu($args);
               ?>
              </div>
-        </div>
+          </div>
+         </div><!-- row-->
+        </div><!-- container -->
+      </div><!-- row -->
+      <div class="row">
+        <div class='col-sm-12 ' >   
          <nav class='clear-list-style'>
           <?php 
            $args = array(
@@ -67,24 +57,9 @@
            );
            wp_nav_menu($args); 
            ?>
-           <script>
-            var servicioLink = document.getElementsByClassName('primary-menu-servicios')[0].getElementsByTagName('a')[0];
-            var servicioIcon = document.createElement('ion-icon');
-             servicioIcon.setAttribute('name','heart');
-            servicioLink.appendChild(servicioIcon);
-             var contratacionesLink = document.getElementsByClassName('primary-menu-contrataciones')[0].getElementsByTagName('a')[0];
-            var contratacionesIcon = document.createElement('ion-icon');
-             contratacionesIcon.setAttribute('name','people');
-            contratacionesLink.appendChild(contratacionesIcon);
-             var contactanosoLink = document.getElementsByClassName('primary-menu-contactanos')[0].getElementsByTagName('a')[0];
-            var  contactanosIcon = document.createElement('ion-icon');
-             contactanosIcon.setAttribute('name','call');
-            contactanosoLink.appendChild(contactanosIcon);
-           </script>
-          </nav><!-- nav -->
-           
+          </nav><!-- nav -->   
         </div>
-      </div>
+      </div><!--row -->
      </div> <!--container -->
   </header>
   <div class="container-fluid color-row">
@@ -94,11 +69,8 @@
        <div class="col-3 pink"></div>
     </div>
   </div>
-
-  <aside id='extra-links'>
-   <a href=<?php echo get_permalink(get_id_by_slug('notificaciones-judiciales')) ?>>Notificaciones judiciales</a>
-   <a href=<?php echo get_permalink(get_id_by_slug('quejas-y-reclamos')) ?>>Quejas y reclamos</a>
-   <a href=''>Descarga nuestro boletín</a>
-  </aside>
+  
   <div class='position-relative'><!--This div mantains poll container stick to the bottom but to the footer! -->  
+  
+  
   

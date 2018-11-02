@@ -36,8 +36,8 @@ switch($cat_name){
   <?php
   if(have_posts()) :
     while(have_posts()) : the_post(); ?>
-  <section class="post-item">
-  <figure class="col-12 col-md-5">
+  <section class="post-item row">
+  <figure class="col-12 col-md-3">
    <a href=<?php echo the_permalink(); ?> >
     <?php if(!has_post_thumbnail($post)){ ?>
     <img src=<?php echo $default_img; ?> />
@@ -47,7 +47,7 @@ switch($cat_name){
     </a>
   </figure>
   
-  <div class="post-content col-12 col-md-7">
+  <div class="post-content col-12 col-md-9">
    <?php 
     $status_color = '';
     $post_status = get_post_meta($post->ID, 'Estado', true);

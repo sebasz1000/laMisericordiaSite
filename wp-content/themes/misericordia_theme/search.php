@@ -17,17 +17,22 @@ get_header();
   </figure>
   <?php endif; ?>
   <div class="post-content">
-     <h2><a href=<?php the_permalink(); ?>><?php the_title(); ?></a></h2>
+     <h2><a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a></h2>
      <small>Publicado el <?php echo the_date('j F, Y'); ?></small>
      <small class="float-right">Ultima modificación: <?php echo the_modified_date('j F, Y'); ?></small>
-     <p><?php  the_excerpt(); ?></p>
+     <p><?php  echo the_excerpt(); ?></p>
     <a class='btn btn-primary green float-right' href=<?php echo the_permalink(); ?> >Continuar leyendo <ion-icon name="arrow-forward"></ion-icon></a>
   </div>
   </section>
   <?php
     endwhile;
-  else : 
-    echo '<p> No hay resultados. </p>';
+  else :  ?>
+   <div class='row'></div>
+   <div class="no-results">
+     <ion-icon name="sad"></ion-icon>
+     <h3 >No se encontraron resultados para esta busqueda</h3>
+   </div>
+   <?php 
   endif;  
   ?>
   </article>

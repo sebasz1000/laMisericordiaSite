@@ -11,6 +11,11 @@ body{
   color: #333;
 }
 
+@media (min-width: 1200px)
+.container {
+    max-width: 1280px !important;
+}
+
 figure{
   padding: 0;
   margin: 0;
@@ -29,6 +34,7 @@ a:visited{
   padding: 0;  
 }
 
+.flex-horizontal-centered{ justify-content: center; }
 
 .nav-previous, .nav-next{
   display: flex;
@@ -102,7 +108,6 @@ ion-icon{ margin-right: 10px;   }
 form#search-box{
   position: relative;
   display: inline-flex;
-  width: 50%;
   margin-top: 0.6em;
 }
 .flex-vertical-right{
@@ -406,33 +411,34 @@ main.page article h2{
 
 /*Quality form box*/
 #poll{
-  background-color: #00a0da;
-  padding: 24px 26px;
-  max-width: 330px;
-  position: fixed;
-  /*right: 3%;*/
-  bottom: 1em;
-  right: 1em;
-  box-shadow: 1px 2px 9px 1px #a9a9a9;;
+  background-color: #fb0084;
+    padding: 0.6em 2em;
+    max-width: 330px;
+    position: fixed;
+    bottom: 0.3em;
+    right: 1em;
+    box-shadow: 1px 2px 9px 1px #a9a9a9;
 }
 #poll h3{
-  color: white;
-  margin: 1.3em 0 0.2em 0;;
-  font-size: 1.35em;
-  text-align: center;
-  font-weight: bold;
+    color: white;
+    margin: 0.8em 0 0.2em 0;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: bold;
 }
 
 #poll-toggle-btn{
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0;
-  display: inline-flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+    display: inline-flex;
     justify-content: flex-end;
+    width: 30px;
+  color: #ffbade;
 }
 a.poll-archive-anchor:visited, a.poll-archive-anchor:link {
-  color: #006186;
+  color: #ffbade;
   text-decoration: underline;
   margin-right: 1.5em;
 }
@@ -441,14 +447,18 @@ a.poll-archive-anchor:visited, a.poll-archive-anchor:link {
 
 /*Extra links*/
 #extra-links{
-  display: none; /* disabled temporaly! */
-  background-color: #a0a0a0;
-  padding: 10px 30px;
-  max-width: 200px;
-  position: fixed;
-  top:128px;
-  left: 3%;
-  line-height: 1.5em;
+        background-color: #019fda;
+    padding: 10px 30px;
+    width: 230px;
+    position: fixed;
+    bottom: 0.3em;
+  left:-7px;
+    line-height: 1.5em;
+    display: block;
+    z-index: 100;
+}
+#extra-links a:link, #extra-links a:visited { 
+color: white !important;
 }
 
 /* helpers */
@@ -487,7 +497,7 @@ article#services ul li{
   justify-content: center;
   min-width: 276px;
   min-height: 100px;
-  padding: 20px 30px;
+  padding: 2.4em;
   text-align: center;
   
 }
@@ -653,6 +663,8 @@ article.post .post-head ion-icon{ font-size: 4.7em; }
 
 .search-query-text{
   text-transform: capitalize;
-  text-decoration: underline;
-  color: #006ec3;
+  color: #ff0085;
 }
+.no-results{ text-align: center; margin: 4em; }
+.no-results h3{ color: #ff0086; }
+.no-results ion-icon{ color: #ff0086; font-size: 10em;}

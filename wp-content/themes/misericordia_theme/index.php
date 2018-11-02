@@ -26,8 +26,6 @@ get_header();
         foreach($posts as $post){
     ?>
      <section class="post-item row">
-      
-      
       <figure class="col-12 col-md-5">
        <?php if(has_post_thumbnail($post)) : ?>
         <a href=<?php echo get_permalink($post->ID); ?> >
@@ -39,8 +37,12 @@ get_header();
         </a>
        <?php endif; ?>
       </figure>
-      <div class="post-content col-12 col-md-7">       
+      <div class="post-content col-12 col-md-7"> 
+       <div class="row"></div>
+        <div class="row"></div>
+         <div class="row"></div>      
        <a href=<?php echo get_permalink($post->ID); ?> ><h3><?php echo $post->post_title; ?></h3></a>
+       <div class="row"></div>
         <p><?php 
           if(has_excerpt($post->ID)){
             echo $post->post_excerpt; 

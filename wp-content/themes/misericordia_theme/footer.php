@@ -1,8 +1,11 @@
-<?php if ( function_exists( 'vote_poll' ) && ! in_pollarchive() ): ?>
+<!-- poll -->
+ 
+
+ <?php if ( function_exists( 'vote_poll' ) && ! in_pollarchive() ): ?>
   <aside id='poll'class='rounded'>
    <h3 class="d-inline-flex"><ion-icon name="happy" size='large'></ion-icon> ¡Danos tu opinión! </h3>
 <?php  get_poll(2); ?>
-  <button id='poll-toggle-btn' type="button" class="btn btn-warning btn-block" data-toggle="button" aria-pressed="false" autocomplete="off">
+  <button id='poll-toggle-btn' type="button" class="btn transparent btn-block" data-toggle="button" aria-pressed="false" autocomplete="off">
   <ion-icon id='icon-down' name='arrow-dropdown' size='large'></ion-icon>
   <ion-icon id='icon-up' name='arrow-dropup' size='large'></ion-icon>
   </button>
@@ -11,7 +14,13 @@
   </aside>
 <?php endif; ?>
 
-
+<!-- floating links -->
+ 
+  <aside id='extra-links' class='rounded'>
+   <a href=<?php echo get_permalink(get_id_by_slug('notificaciones-judiciales')) ?>><small><ion-icon name='warning'></ion-icon>Notificaciones judiciales</small></a>
+   <a href=<?php echo get_permalink(get_id_by_slug('boletin')) ?>><small><ion-icon name='download'></ion-icon>Descarga nuestro boletín</small></a>
+  </aside>
+  
 </div><!--This close div mantains poll container stick to the bottom but to the footer! -->
  
 <footer id='footer' class="position-relative">
