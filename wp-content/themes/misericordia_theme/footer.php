@@ -17,7 +17,6 @@
 <!-- floating links -->
  
   <aside id='extra-links' class='rounded'>
-   <a href=<?php echo get_permalink(get_id_by_slug('notificaciones-judiciales')) ?>><small><ion-icon name='warning'></ion-icon>Notificaciones judiciales</small></a>
    <a href=<?php echo get_permalink(get_id_by_slug('boletin')) ?>><small><ion-icon name='download'></ion-icon>Descarga nuestro boletín</small></a>
   </aside>
   
@@ -60,6 +59,8 @@
           <small style='color:#FFF !important;'><?php bloginfo("name"); ?> - &copy; <?php echo date('Y'); ?> <br>
             Diseño y desarrollo web por <a style='color:white;' href='https://www.behance.net/sebasz' target='_blank' ><b>Sebasz1000</b></a>
           </small>
+          <br>
+          <img width='80%' src=<?php echo get_stylesheet_directory_uri() . '/static/supersalud.png' ?> >
         </section>
         </article>  
     </div> 
@@ -97,6 +98,7 @@
         <p><ion-icon name="pin"></ion-icon>Calle 43 26-3,Calarcá-Colombia</p>
         <span style='display:inline-flex;'><ion-icon name="medkit"></ion-icon><p><b>CONSULTA EXTERNA</b> <br>CLL 18N 14-36</p></span>
         </section> 
+        <?php echo do_shortcode('[page_visit_counter_md_total_sites_visit]');?>
       </article>
     </div>
   </div>

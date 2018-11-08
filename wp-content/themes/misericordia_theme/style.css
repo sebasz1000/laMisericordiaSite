@@ -16,6 +16,11 @@ body{
     max-width: 1280px !important;
 }
 
+@media (min-width: 576px)
+.container {
+    max-width: 570px;
+}
+
 figure{
   padding: 0;
   margin: 0;
@@ -57,8 +62,19 @@ p{ line-height: 1.65em }
 .transparent{ background-color: transparent !important; }
 .no-border{ border: none !important; }
 
-/* COLORS */
+/* For Sliders style*/
+.wp1s-slider-wrapper{ padding-bottom: 0 !important; }
 
+.bx-wrapper img{ width: 100% !important; }
+
+.wp1s-caption-wrapper.wp1s-caption-type-4{  text-align: left; }
+
+/* FOR VISITS COUNTER */
+
+.md-pvc-total-reports-sub{ background: #025d6f !important; }
+.md-pvc-total-reports .md-pvc-total-reports-sub span{  color: #007f98 !important; }
+
+/* COLORS */
 
 .blue{ background-color: #00A0DA; }
 .blue h1{ color: #c1efff; }

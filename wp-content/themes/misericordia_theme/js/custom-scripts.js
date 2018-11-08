@@ -1,27 +1,34 @@
 jQuery(document).ready(function($) {
 
+  // appens icons for primary menu
+  function appendIcon(className, ionIconName){
+    if(document.getElementsByClassName(className)[0]){
+        const menuItem = document.getElementsByClassName(className)[0].getElementsByTagName('a')[0];                   
+        const icon = document.createElement('ion-icon');
+        icon.setAttribute('name', ionIconName);
+        menuItem.appendChild(icon);
+    }
+  }
   
-     var servicioLink = document.getElementsByClassName('primary-menu-servicios')[0].getElementsByTagName('a')[0];
-            var servicioIcon = document.createElement('ion-icon');
-             servicioIcon.setAttribute('name','heart');
-            servicioLink.appendChild(servicioIcon);
-             var contratacionesLink = document.getElementsByClassName('primary-menu-contrataciones')[0].getElementsByTagName('a')[0];
-            var contratacionesIcon = document.createElement('ion-icon');
-             contratacionesIcon.setAttribute('name','people');
-            contratacionesLink.appendChild(contratacionesIcon);
-             var contactanosoLink = document.getElementsByClassName('primary-menu-contactanos')[0].getElementsByTagName('a')[0];
-            var  contactanosIcon = document.createElement('ion-icon');
-             contactanosIcon.setAttribute('name','call');
-            contactanosoLink.appendChild(contactanosIcon);
+  appendIcon('primary-menu-servicios','heart');
+  appendIcon('primary-menu-contrataciones','people');
+  appendIcon('primary-menu-contactanos','call');
+  
+  //appends dropdown-item class(for bootstrap dropdown menu styles) for secondary menu
+  const secondaryMenu = document.getElementById('secondary-menu').getElementsByTagName('li');
+  
+  for(var i = 0; i < secondaryMenu.length; i++){
+    secondaryMenu[i].classList.add('dropdown-item');
+  }
   
   
-//For style of pool buttons
-const votebtn = document.getElementsByClassName('Buttons')[0];
-  if(votebtn != null){
-votebtn.classList.add('btn');
-votebtn.classList.add('btn-warning');
-votebtn.classList.add('btn-block');
-}
+  //For style of pool buttons
+  const votebtn = document.getElementsByClassName('Buttons')[0];
+    if(votebtn != null){
+      votebtn.classList.add('btn');
+      votebtn.classList.add('btn-warning');
+      votebtn.classList.add('btn-block');
+    }
 
   //toggle btn
 
@@ -33,7 +40,6 @@ votebtn.classList.add('btn-block');
      $('#icon-down').toggle();
   });
   
-
 
 //keeps pool container fixed but over footer
 function checkOffset(elementID) {

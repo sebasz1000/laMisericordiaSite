@@ -1,16 +1,18 @@
 <?php
 get_header();
 ?>
+<!-- landing page imageeee slider! -->
 <figure class='container-fluid' id="home-main-image">
-    <img width='100%' src=<?php echo get_template_directory_uri() . '/static/front-page-img.jpeg' ?> />
+  <?php echo do_shortcode("[wp1s id='343']"); ?>
 </figure>
-  <div class="container-fluid color-row">
-    <div class="row high">
-       <div class="col-5 blue"></div>
-       <div class="col-4 green"></div>
-       <div class="col-3 pink"></div>
-    </div>
+
+<div class="container-fluid color-row">
+  <div class="row high">
+    <div class="col-5 blue"></div>
+    <div class="col-4 green"></div>
+    <div class="col-3 pink"></div>
   </div>
+</div>
 <main class="page container-fluid" id='home-page-content'>
   <article id='novedades' class="container">
    <a href=<?php echo get_category_link(get_cat_ID('novedades')); ?>><h2 class="align-center blue-text"><ion-icon name="megaphone"></ion-icon> Novedades</h2></a>

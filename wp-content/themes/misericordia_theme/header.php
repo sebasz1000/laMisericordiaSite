@@ -22,17 +22,8 @@
             <?php  get_search_form(); ?>
          
            <div class="d-flex" id='secondary-menu-set'>
-           <div class="dropdown-secondary">
-              <button class="btn btn-secondary dropdown-toggle" id='secondary-dropdown-btn' type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Publicación de Informes</button>
-              <?php 
-                $args = array(
-                  'theme_location' => 'secondary',
-                  'menu_id' => 'secondary-menu',
-                  'menu_class' => 'dropdown-menu dropdown-menu-right'
-                );
-                wp_nav_menu($args)
-              ?>
-           </div>
+           <a href=<?php echo get_permalink(get_id_by_slug('notificaciones-judiciales')) ?>><button type='button' class='btn btn-danger'><ion-icon name='warning'></ion-icon>      Notificaciones judiciales</button></a>
+          
            <div class="dropdown">
              <button class="btn dropdown-toggle transparent" id='hamburger' type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <ion-icon name='menu' size='large'></ion-icon></button>
               <?php 
@@ -48,8 +39,20 @@
         </div><!-- container -->
       </div><!-- row -->
       <div class="row">
-        <div class='col-sm-12 ' >   
-         <nav class='clear-list-style'>
+        <div class='col-sm-12 flex justify-content-end' >  
+          <div class="dropdown-secondary">
+          
+              <button class="btn btn-secondary dropdown-toggle" id='secondary-dropdown-btn' type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><ion-icon name='document'></ion-icon> Publicación de informes</button>
+              <?php 
+                $args = array(
+                  'theme_location' => 'secondary',
+                  'menu_id' => 'secondary-menu',
+                  'menu_class' => 'dropdown-menu dropdown-menu-right'
+                );
+                wp_nav_menu($args)
+              ?>
+         </div> 
+         <nav class='clear-list-style '>
           <?php 
            $args = array(
                 'theme_location' => 'primary',
