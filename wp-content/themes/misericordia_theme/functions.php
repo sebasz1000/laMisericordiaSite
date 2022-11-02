@@ -59,6 +59,14 @@ function get_id_by_slug($page_slug) {
     return null;
 }
 
+//Page Slug Body Class
+function add_slug_body_class( $classes ) {
+    global $post;
+    if ( isset( $post ) ) {
+    $classes[] = $post->post_type . '-' . $post->post_name;
+    }
+    return $classes;
+}
 
 
 
@@ -82,7 +90,8 @@ function theme_setup(){
 
   
 }
-
+//adds css page slug selector
+add_filter( 'body_class', 'add_slug_body_class' );
 add_action('after_setup_theme', 'theme_setup');
 
 

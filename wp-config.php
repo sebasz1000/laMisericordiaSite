@@ -21,12 +21,14 @@
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define('DB_NAME', 'misericordia_db');
-
+//TODOS ESTOS DATOS DEBEN ESTAR CONNFIGURADOS DE ACUERDO A SU MYSQL!!
+//LA PÁGINA SE DAÑA, 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', 'root');  
 
 /** MySQL database password */
-define('DB_PASSWORD', 'root');
+define('DB_PASSWORD', 'root');  //ESTA CONFIGURACIÓN SÓLO LA SABE EL GESTOR DE BASE DE DATOS!
+//Listo, la página se arregla!
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
